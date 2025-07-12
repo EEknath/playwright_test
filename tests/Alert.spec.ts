@@ -1,7 +1,7 @@
-import test from "@playwright/test";
+import {test} from "@playwright/test";
 
 
-test.only("Prompt alert",async({page})=>{
+test("Prompt alert",async({page})=>{
 page.on('dialog',alerttype=>{
 
    
@@ -25,5 +25,5 @@ await page.goto("https://www.leafground.com/alert.xhtml")
 await page.locator("//span[text()='Show']").nth(4).click();
 await page.waitForTimeout(4000)
 
-console.log("test")
+//console.log("test")     
 })

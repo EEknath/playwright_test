@@ -25,5 +25,5 @@ await page.goto("https://www.leafground.com/alert.xhtml")
 await page.locator("//span[text()='Show']").nth(4).click();
 await page.waitForTimeout(4000)
 
-
+console.log("test")
 })

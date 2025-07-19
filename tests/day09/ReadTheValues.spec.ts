@@ -8,9 +8,13 @@ interface LoginRecord {
     username: string;
     password: string;
 }
-
+//This builds the full absolute path 
 const csvPath = path.join(__dirname, '../../UtilsFile/LoginData.csv');
+
+// it is refer the file directory 
+//'utf8': tells Node.js to read it as a UTF-8 encoded text file
 const fileContent = fs.readFileSync(csvPath, 'utf8');
+//It means records must be an array of objects matching the LoginRecord interface.
 const records: LoginRecord[] = parse(fileContent, {
     columns: true,
     skip_empty_lines: true

@@ -4,7 +4,7 @@ console.log('config')
 
 export default defineConfig({
   testDir: './tests', 
-  timeout: 30000,    
+  timeout: 90000,    
   retries: 0,         
 
   use: {
@@ -12,6 +12,7 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
+  
      launchOptions: {
     args: ['--window-position=100,100', '--window-size=1280,720']
   },

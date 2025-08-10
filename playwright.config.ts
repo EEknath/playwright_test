@@ -17,6 +17,7 @@ export default defineConfig({
     args: ['--window-position=100,100', '--window-size=1280,720']
   },
   },
-
-  reporter: [['html', { open: 'on-failure' }]],
+ reporter: [
+    ['allure-playwright'],
+    ['html', { open: 'never' }]]
 });
